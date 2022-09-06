@@ -13,12 +13,12 @@ public class Game extends Thread {
 	private boolean top = true;
 	private int strikes, balls, scoreEvens, scoreOdds, maxInnings, outs = 0;
 	private int inning = 1;
-	private ArrayList<ClientHandler> evens = new ArrayList<ClientHandler>();	
-	private ArrayList<ClientHandler> odds = new ArrayList<ClientHandler>();
-	private ArrayList<ClientHandler> players = new ArrayList<ClientHandler>();
-	private ArrayList<ArrayList<Integer>> answers = new ArrayList<ArrayList<Integer>>();	
-	private Bases bases;
-	private ArrayList<Integer> pitch = new ArrayList<Integer>();
+	private Team evens = new Team();
+	private Team odds = new Team();
+	private ArrayList<Player> players = new ArrayList<>();
+	private ArrayList<ArrayList<Integer>> answers = new ArrayList<>();	
+	private Bases bases = new Bases();
+	private ArrayList<Integer> pitch = new ArrayList<>();
 	private Logger log;	
 	private boolean full = false;
 	
@@ -31,7 +31,6 @@ public class Game extends Thread {
 		waitForPlayers();
 		log.printLog("game " + Integer.toString(gameID) + " started with " + Integer.toString(players.size()) + " players");
 		makeTeams();
-		bases = new Bases(evens, odds);
 		setMaxInnings();
 		while(inning <= maxInnings) {
 			startInning();
@@ -62,13 +61,15 @@ public class Game extends Thread {
 	public void makeTeams() {
 		for(int j = 0; j < players.size(); j++) {
 			if (j%2 == 0) {
-				evens.add(players.get(j));
-				players.get(j).sender("command:team:true");
+				evens.setRealPlayerSlot(players.get(j));
+				players.get(j).getClientHandler().sender("command:team:true");
 			} else {
-				odds.add(players.get(j));
-				players.get(j).sender("command:team:false");
+				odds.setRealPlayerSlot(players.get(j));
+				players.get(j).getClientHandler().sender("command:team:false");
 			}
 		}
+		evens.fillWithBots();
+		odds.fillWithBots();
 	}
 	
 	public void startInning() {
@@ -80,10 +81,10 @@ public class Game extends Thread {
 			}
 			massSend("command:jumbotron:" + strikes + "," + balls + "," + outs  + "," + inning + "," + scoreEvens + " - " + scoreOdds + "," + topStr + ",false");
 			if (top) {
-				bases.setFieldHome(odds);
+				bases.setFieldHome(odds.getPlayers());
 				massSend("command:inningStart:top");
 			} else {
-				bases.setFieldHome(evens);
+				bases.setFieldHome(evens.getPlayers());
 				massSend("command:inningStart:bot");
 			}
 	}
@@ -102,14 +103,15 @@ public class Game extends Thread {
 		try {Thread.sleep(1);} catch (InterruptedException e) {e.printStackTrace();}
 	}
 	
-	public String getAnswerFromMount(ClientHandler pitcher) {		
-		pitcher.sender("command:pitch:choose a pitch");
+	public String getAnswerFromMount(Player player) {		
+		ClientHandler ch = player.getClientHandler();
+		ch.sender("command:pitch:choose a pitch");
 		while (true) {
 			try {sleep(1);} catch (InterruptedException e) {e.printStackTrace();}
-			if(!pitcher.getStoredIn().equals("")) {
-				String choice= pitcher.getStoredIn();
-				pitcher.clearStoredIn();
-				pitcher.sender("command:umpire: ");
+			if(!ch.getStoredIn().equals("")) {
+				String choice= ch.getStoredIn();
+				ch.clearStoredIn();
+				ch.sender("command:umpire: ");
 				return choice;
 			}
 		}
@@ -119,21 +121,23 @@ public class Game extends Thread {
 		log.printLog("getAnswers game started");
 		answers.clear();
 		while (answers.size() < players.size()) {
-			for (ClientHandler player : players) {
-				if(!player.getStoredIn().equals("")) {
+			for (Player player : players) {
+				ClientHandler ch = player.getClientHandler();
+				if(!ch.getStoredIn().equals("")) {
 					ArrayList<Integer> answer = new ArrayList<Integer>();
-					answer.add(Integer.valueOf(player.getClientID()));
-					answer.add(Integer.valueOf(player.getStoredIn()));
+					answer.add(Integer.valueOf(ch.getClientID()));
+					answer.add(Integer.valueOf(ch.getStoredIn()));
 					answers.add(answer);
-					player.clearStoredIn();
-					log.printLog("got " + answers.get(answers.size()-1).get(1) + " from player " + player.getClientID());
+					ch.clearStoredIn();
+					log.printLog("got " + answers.get(answers.size()-1).get(1) + " from player " + ch.getClientID());
 				}
 			}
 		}
 		log.printLog("closing getAnswers game " + gameID);
 	}
 	
-	public void addPlayer(ClientHandler newGuy) {
+	public void addPlayer(ClientHandler ch) {
+		Player newGuy = new RealPlayer(ch);
 		players.add(newGuy);
 	}
 	
@@ -175,14 +179,22 @@ public class Game extends Thread {
 		}
 		try {Thread.sleep(100);} catch (InterruptedException e) {e.printStackTrace();}
 		massSend("command:turnStart:" + strikes + "," + balls + "," + outs  + "," + inning + "," + scoreEvens + " - " + scoreOdds + "," + topStr + ",false");
-		bases.setHitter(top);
+		if(top) {
+			bases.setHitter(evens);
+		} else {
+			bases.setHitter(odds);
+		}
 		try {Thread.sleep(2000);} catch (InterruptedException e) {e.printStackTrace();}
 		while (true) {
 			massSend("command:startLoop:" + strikes + "," + balls + "," + outs  + "," + inning + "," + scoreEvens + " - " + scoreOdds + "," + topStr + ",false");			
 			pitch = getPitch(getAnswerFromMount(bases.getPitcher()));
 			try {Thread.sleep(500);} catch (InterruptedException e) {e.printStackTrace();}
 			massSend("command:umpire:" + pitch.get(0) + " * " + pitch.get(1));
-			log.printLog("sending pitch " + pitch.toString() + " to player " + bases.getHitter().getClientID() + " from player " + bases.getPitcher().getClientID());
+			if (bases.getHitter().getClientHandler() != null) {
+				log.printLog("sending pitch " + pitch.toString() + " to player " + bases.getHitter().getClientHandler().getClientID() + " from player " + bases.getPitcher().getClientHandler().getClientID());
+			} else {
+				log.printLog("sending pitch " + pitch.toString() + " to bot from player " + bases.getPitcher().getClientHandler().getClientID());
+			}
 			sendPitch(pitch);
 			log.printLog("swing received : " + answers);
 			swing = swingResult(pitch);
@@ -240,20 +252,39 @@ public class Game extends Thread {
 	}
 	
 	private void sendPitch(ArrayList<Integer> pitch) {
-		bases.getHome().get(0).sender("command:sender:" + pitch.get(0) + " * " + pitch.get(1));	
-		bases.getHome().get(1).sender("command:sender:" + pitch.get(0) + " * " + pitch.get(1));
+		Player[] answerers = new Player[2];
+		if (bases.getHome()[0].getClientHandler() == null) {
+			if (top) {
+				answerers[0] = odds.getPlayers()[evens.cycleRealPlayersBattingNumber()];
+			} else {
+				answerers[0] = evens.getPlayers()[odds.cycleRealPlayersBattingNumber()];
+			}
+		} else {
+			answerers[0] = bases.getHome()[0];	
+		}
+		if (bases.getHome()[1].getClientHandler() == null) {
+			if (top) {
+				answerers[1] = evens.getPlayers()[evens.cycleRealPlayersBattingNumber()];
+			} else {
+				answerers[1] = odds.getPlayers()[odds.cycleRealPlayersBattingNumber()];
+			}
+		} else {
+			answerers[1] = bases.getHome()[1];	
+		}
+		answerers[0].getClientHandler().sender("command:sender:" + pitch.get(0) + " * " + pitch.get(1));
+		answerers[1].getClientHandler().sender("command:sender:" + pitch.get(0) + " * " + pitch.get(1));
+		answers.clear();
 		log.printLog("getAnswers game " + gameID + " started");
 		
-		answers.clear();
-		while (answers.size() < bases.getHome().size()) {
+		while (answers.size() < 2) {
 			for (int i = 0 ; i < 2 ; i++) {
-				if(!bases.getHome().get(i).getStoredIn().equals("")) {
+				if(!answerers[i].getClientHandler().getStoredIn().equals("")) {
 					ArrayList<Integer> answer = new ArrayList<Integer>();
 					answer.add(i);
-					answer.add(Integer.valueOf(bases.getHome().get(i).getStoredIn()));
+					answer.add(Integer.valueOf(answerers[i].getClientHandler().getStoredIn()));
 					answers.add(answer);
-					bases.getHome().get(i).clearStoredIn();
-					log.printLog("got " + answers.get(answers.size()-1).get(1) + " from player " + bases.getHome().get(i).getClientID());
+					answerers[i].getClientHandler().clearStoredIn();
+					log.printLog("got " + answers.get(answers.size()-1).get(1) + " from player " + answerers[i].getClientHandler().getClientID());
 				}
 			}
 		}
@@ -290,8 +321,8 @@ public class Game extends Thread {
 	}
 	
 	public void massSend(String str) {
-		for(ClientHandler client : players) {
-			client.sender(str);
+		for(Player player : players) {
+			player.getClientHandler().sender(str);
 		}
 	}
 	
