@@ -237,3 +237,38 @@
 2022-09-01 11:03:44 closing getAnswers game 1
 2022-09-01 11:03:44 maxInnings : 1
 2022-09-05 20:56:53 waiting on players for 3 secs
+2022-09-06 13:25:20 waiting on players for 3 secs
+2022-09-06 13:25:27 game 1 started with 2 players
+2022-09-06 13:25:27 getAnswers game started
+2022-09-06 13:25:36 got 2 from player 4
+2022-09-06 13:25:37 got 3 from player 5
+2022-09-06 13:25:37 closing getAnswers game 1
+2022-09-06 13:25:37 maxInnings : 2
+2022-09-06 13:26:09 sending pitch [4, 4, 1] to player 4 from player 5
+2022-09-06 13:26:09 getAnswers game 1 started
+2022-09-06 13:26:10 got 8 from player 5
+2022-09-06 13:26:11 got 8 from player 4
+2022-09-06 13:26:11 swing received : [[0, 8], [1, 8]]
+2022-09-06 13:26:11 hit
+2022-09-06 13:26:12 outs 0 ,score 0 - 0
+2022-09-06 13:30:34 waiting on players for 3 secs
+2022-09-06 13:30:41 game 1 started with 2 players
+2022-09-06 13:30:41 getAnswers game started
+2022-09-06 13:30:42 got 9 from player 2
+2022-09-06 13:30:43 got 9 from player 3
+2022-09-06 13:30:43 closing getAnswers game 1
+2022-09-06 13:30:43 maxInnings : 9
+2022-09-06 13:30:57 sending pitch [3, 7, 1] to player 2 from player 3
+2022-09-06 13:30:57 getAnswers game 1 started
+2022-09-06 13:30:57 got 8 from player 3
+2022-09-06 13:30:58 got 8 from player 2
+2022-09-06 13:30:58 swing received : [[0, 8], [1, 8]]
+2022-09-06 13:30:58 hit
+2022-09-06 13:31:00 outs 0 ,score 0 - 0
+2022-09-06 13:36:42 waiting on players for 3 secs
+2022-09-06 13:36:49 game 1 started with 2 players
+2022-09-06 13:36:49 getAnswers game started
+2022-09-06 13:36:51 got 9 from player 2
+2022-09-06 13:36:52 got 8 from player 3
+2022-09-06 13:36:52 closing getAnswers game 1
+2022-09-06 13:36:52 maxInnings : 8

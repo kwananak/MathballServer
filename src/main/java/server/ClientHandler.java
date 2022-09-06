@@ -23,27 +23,18 @@ public class ClientHandler extends Thread{
 
 	public void run() {
 		System.out.println("ClientHandlerstarted" + clientID);
-		Receiver receiver = new Receiver();
-		receiver.start();			
-	}
-
-	public class Receiver extends Thread{
-		
-		public void run() {
-			System.out.println("Receiver client " + clientID + "  started");
-			try {
-				while (true) {
-					storedIn = in.readLine();
-					inputs.add(storedIn);
-					System.out.println("client " + clientID + " says: " + storedIn);
-					if(storedIn==null) {
-						in.close();
-					}
+		try {
+			while (true) {
+				storedIn = in.readLine();
+				inputs.add(storedIn);
+				System.out.println("client " + clientID + " says: " + storedIn);
+				if(storedIn==null) {
+					in.close();
 				}
-			} catch (IOException e) {
-				e.printStackTrace();
 			}
-		}				
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public void sender(String msg) {

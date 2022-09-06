@@ -1,0 +1,4 @@
+2022-09-06 13:29:25 waiting on players for 3 secs
+2022-09-06 13:29:32 game 4 started with 2 players
+2022-09-06 13:29:32 getAnswers game started
+2022-09-06 13:29:36 got 5 from player 11
