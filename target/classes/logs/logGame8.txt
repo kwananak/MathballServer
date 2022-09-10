@@ -1,0 +1,7 @@
+2022-09-10 13:23:15 waiting on players for 3 secs
+2022-09-10 13:23:22 game 8 started with 2 players
+2022-09-10 13:23:22 getAnswers game started
+2022-09-10 13:23:36 got 2 from player 16
+2022-09-10 13:23:52 got 1 from player 17
+2022-09-10 13:23:52 closing getAnswers game 8
+2022-09-10 13:23:52 maxInnings : 1

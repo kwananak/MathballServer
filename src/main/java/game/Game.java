@@ -90,9 +90,8 @@ public class Game extends Thread {
 	}
 	
 	public void setMaxInnings() {
-		Integer numInns = 0;		
-		massSend("command:umpire:How many Innings?");
-		massSend("command:sender:How many Innings?");
+		Integer numInns = 0;
+		massSend("command:inningSender:How many Innings?");
 		getAnswersFromHandlers();
 		for(ArrayList<Integer> i : answers) {
 			numInns += i.get(1);
@@ -100,14 +99,14 @@ public class Game extends Thread {
 		maxInnings = numInns / answers.size();
 		log.printLog("maxInnings : " + Integer.toString(maxInnings));
 		massSend("command:umpire: " + Integer.toString(maxInnings) + " innings");				
-		try {Thread.sleep(1);} catch (InterruptedException e) {e.printStackTrace();}
+		try {Thread.sleep(1500);} catch (InterruptedException e) {e.printStackTrace();}
 	}
 	
 	public String getAnswerFromMount(Player player) {		
 		ClientHandler ch = player.getClientHandler();
 		ch.sender("command:pitch:choose a pitch");
 		while (true) {
-			try {sleep(1);} catch (InterruptedException e) {e.printStackTrace();}
+			try {sleep(1000);} catch (InterruptedException e) {e.printStackTrace();}
 			if(!ch.getStoredIn().equals("")) {
 				String choice= ch.getStoredIn();
 				ch.clearStoredIn();
@@ -177,7 +176,7 @@ public class Game extends Thread {
 		} else {
 			topStr = "false";
 		}
-		try {Thread.sleep(100);} catch (InterruptedException e) {e.printStackTrace();}
+		try {Thread.sleep(1000);} catch (InterruptedException e) {e.printStackTrace();}
 		massSend("command:turnStart:" + strikes + "," + balls + "," + outs  + "," + inning + "," + scoreEvens + " - " + scoreOdds + "," + topStr + ",false");
 		if(top) {
 			bases.setHitter(evens);

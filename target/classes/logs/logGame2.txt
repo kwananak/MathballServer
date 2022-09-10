@@ -5,3 +5,44 @@
 2022-09-06 13:27:59 got 2 from player 6
 2022-09-06 13:27:59 closing getAnswers game 2
 2022-09-06 13:27:59 maxInnings : 1
+2022-09-09 16:35:52 waiting on players for 3 secs
+2022-09-09 16:35:59 game 2 started with 3 players
+2022-09-09 16:35:59 getAnswers game started
+2022-09-09 16:49:27 waiting on players for 3 secs
+2022-09-09 16:49:34 game 2 started with 2 players
+2022-09-09 16:49:34 getAnswers game started
+2022-09-09 17:23:42 waiting on players for 3 secs
+2022-09-09 17:23:49 game 2 started with 2 players
+2022-09-09 17:23:49 getAnswers game started
+2022-09-09 17:23:51 got 58 from player 5
+2022-09-09 17:23:53 got 4 from player 4
+2022-09-09 17:23:53 closing getAnswers game 2
+2022-09-09 17:23:53 maxInnings : 31
+2022-09-09 17:24:00 sending pitch [9, 9, 2] to player 4 from player 5
+2022-09-09 17:24:00 getAnswers game 2 started
+2022-09-10 11:35:29 waiting on players for 3 secs
+2022-09-10 11:35:36 game 2 started with 2 players
+2022-09-10 11:35:36 getAnswers game started
+2022-09-10 13:07:07 waiting on players for 3 secs
+2022-09-10 13:07:13 game 2 started with 2 players
+2022-09-10 13:07:13 getAnswers game started
+2022-09-10 13:13:51 waiting on players for 3 secs
+2022-09-10 13:13:58 game 2 started with 2 players
+2022-09-10 13:13:58 getAnswers game started
+2022-09-10 13:13:59 got 1 from player 5
+2022-09-10 13:14:07 got 1 from player 4
+2022-09-10 13:14:07 closing getAnswers game 2
+2022-09-10 13:14:07 maxInnings : 1
+2022-09-10 13:14:16 sending pitch [8, 10, 2] to player 4 from player 5
+2022-09-10 13:14:16 getAnswers game 2 started
+2022-09-10 13:14:18 got 85 from player 5
+2022-09-10 13:14:20 got 248 from player 4
+2022-09-10 13:14:20 swing received : [[0, 85], [1, 248]]
+2022-09-10 13:14:20 hit
+2022-09-10 13:14:22 outs 0 ,score 0 - 0
+2022-09-10 13:14:29 sending pitch [10, 12, 2] to bot from player 5
+2022-09-10 13:14:29 getAnswers game 2 started
+2022-09-10 13:14:32 got 48 from player 4
+2022-09-10 13:14:32 got 78 from player 5
+2022-09-10 13:14:32 swing received : [[1, 48], [0, 78]]
+2022-09-10 13:14:32 strike
