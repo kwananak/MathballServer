@@ -1,0 +1,26 @@
+2022-09-10 15:36:47 waiting on players for 3 secs
+2022-09-10 15:36:54 game 11 started with 2 players
+2022-09-10 15:36:54 getAnswers game started
+2022-09-13 16:37:21 waiting on players for 3 secs
+2022-09-13 16:37:29 game 11 started with 2 players
+2022-09-13 16:37:29 getAnswers game started
+2022-09-13 16:37:30 got 4 from player 23
+2022-09-13 16:37:31 got 3 from player 22
+2022-09-13 16:37:31 closing getAnswers game 11
+2022-09-13 16:37:31 maxInnings : 3
+2022-09-13 16:37:46 sending pitch [9, 10, 2] to player 22 from player 23
+2022-09-13 16:37:46 getAnswers game 11 started
+2022-09-13 16:37:59 got 0 from player 23
+2022-09-13 16:38:00 got 9 from player 22
+2022-09-13 16:38:00 swing received : [[0, 0], [1, 9]]
+2022-09-13 16:38:00 hit
+2022-09-13 16:38:02 outs 0 ,score 0 - 0
+2022-09-13 16:38:11 sending pitch [9, 12, 2] to bot from player 23
+2022-09-13 16:38:11 getAnswers game 11 started
+2022-09-13 16:38:15 got 8 from player 22
+2022-09-13 16:38:17 got 8 from player 23
+2022-09-13 16:38:17 swing received : [[1, 8], [0, 8]]
+2022-09-13 16:38:17 strike
+2022-09-13 17:10:21 waiting on players for 3 secs
+2022-09-13 17:10:27 game 11 started with 2 players
+2022-09-13 17:10:27 getAnswers game started

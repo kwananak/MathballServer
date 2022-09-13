@@ -13,8 +13,7 @@ public class Game extends Thread {
 	private boolean top = true;
 	private int strikes, balls, scoreEvens, scoreOdds, maxInnings, outs = 0;
 	private int inning = 1;
-	private Team evens = new Team();
-	private Team odds = new Team();
+	private Team evens, odds;
 	private ArrayList<Player> players = new ArrayList<>();
 	private ArrayList<ArrayList<Integer>> answers = new ArrayList<>();	
 	private Bases bases = new Bases();
@@ -28,10 +27,10 @@ public class Game extends Thread {
 	}
 	
 	public void run() {
-		waitForPlayers();
+		Setuper.waitForPlayers(this);
 		log.printLog("game " + Integer.toString(gameID) + " started with " + Integer.toString(players.size()) + " players");
-		makeTeams();
-		setMaxInnings();
+		setTeams(Setuper.makeTeams(players));
+		Setuper.setMaxInnings(this);
 		while(inning <= maxInnings) {
 			startInning();
 			while(outs < 2) {
@@ -42,36 +41,7 @@ public class Game extends Thread {
 		}
 		endGame();
 	}
-	
-	public void waitForPlayers() {
-		log.printLog("waiting on players for 3 secs");
-		int i = 0;
 		
-		while (true) {
-			i++;		
-			if (players.size() > 9 || (players.size() > 1 && i > 3000)) {
-				break;
-			} else {
-				try {Thread.sleep(1);} catch (InterruptedException e) {e.printStackTrace();}
-			}
-		}		
-		full = !full;
-	}
-	
-	public void makeTeams() {
-		for(int j = 0; j < players.size(); j++) {
-			if (j%2 == 0) {
-				evens.setRealPlayerSlot(players.get(j));
-				players.get(j).getClientHandler().sender("command:team:true");
-			} else {
-				odds.setRealPlayerSlot(players.get(j));
-				players.get(j).getClientHandler().sender("command:team:false");
-			}
-		}
-		evens.fillWithBots();
-		odds.fillWithBots();
-	}
-	
 	public void startInning() {
 			String topStr;
 			if(top) {
@@ -87,19 +57,6 @@ public class Game extends Thread {
 				bases.setFieldHome(evens.getPlayers());
 				massSend("command:inningStart:bot");
 			}
-	}
-	
-	public void setMaxInnings() {
-		Integer numInns = 0;
-		massSend("command:inningSender:How many Innings?");
-		getAnswersFromHandlers();
-		for(ArrayList<Integer> i : answers) {
-			numInns += i.get(1);
-		}
-		maxInnings = numInns / answers.size();
-		log.printLog("maxInnings : " + Integer.toString(maxInnings));
-		massSend("command:umpire: " + Integer.toString(maxInnings) + " innings");				
-		try {Thread.sleep(1500);} catch (InterruptedException e) {e.printStackTrace();}
 	}
 	
 	public String getAnswerFromMount(Player player) {		
@@ -187,8 +144,7 @@ public class Game extends Thread {
 		while (true) {
 			massSend("command:startLoop:" + strikes + "," + balls + "," + outs  + "," + inning + "," + scoreEvens + " - " + scoreOdds + "," + topStr + ",false");			
 			pitch = getPitch(getAnswerFromMount(bases.getPitcher()));
-			try {Thread.sleep(500);} catch (InterruptedException e) {e.printStackTrace();}
-			massSend("command:umpire:" + pitch.get(0) + " * " + pitch.get(1));
+			massSend("command:ball:" + pitch.get(0) + "X" + pitch.get(1));
 			if (bases.getHitter().getClientHandler() != null) {
 				log.printLog("sending pitch " + pitch.toString() + " to player " + bases.getHitter().getClientHandler().getClientID() + " from player " + bases.getPitcher().getClientHandler().getClientID());
 			} else {
@@ -231,8 +187,7 @@ public class Game extends Thread {
 			}
 		}
 	}
-		
-	
+
 	private ArrayList<Integer> getPitch(String str) {
 		Random rand = new Random();
 		ArrayList<Integer> intPitch = new ArrayList<Integer>();
@@ -246,7 +201,6 @@ public class Game extends Thread {
 			intPitch.add(rand.nextInt(5) + 8);
 			intPitch.add(2);
 		}
-		
 		return intPitch; 
 	}
 	
@@ -323,6 +277,31 @@ public class Game extends Thread {
 		for(Player player : players) {
 			player.getClientHandler().sender(str);
 		}
+	}
+
+	public void setTeams(Team[] teams) {
+		this.evens = teams[0];
+		this.odds = teams[1];
+	}
+
+	public void printLog(String string) {
+		log.printLog(string);
+	}
+	
+	public void setFull() {
+		full = true;
+	}
+	
+	public int getNumberOfPlayers() {
+		return players.size();
+	}
+
+	public ArrayList<ArrayList<Integer>> getAnswers() {
+		return answers;
+	}
+
+	public void setMaxInnings(int maxInnings) {
+		this.maxInnings = maxInnings;
 	}
 	
 }
