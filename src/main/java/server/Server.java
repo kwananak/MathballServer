@@ -16,9 +16,7 @@ public class Server {
 		try (ServerSocket ss = new ServerSocket(5565)) {
 			int clientID = 0;
 			int gameID = 0;
-			log.printLog("serverStarted");
-			
-			
+			log.printLog("serverStarted");			
 			while(true) {
 				clients.add(new ClientHandler(ss.accept(), clientID));
 				log.printLog("accepted connection " + clients.get(clients.size()-1));

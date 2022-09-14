@@ -275,3 +275,61 @@
 2022-09-13 17:01:40 got 4 from player 11
 2022-09-13 17:01:40 closing getAnswers game 5
 2022-09-13 17:01:40 maxInnings : 3
+2022-09-13 17:39:50 waiting on players for 3 secs
+2022-09-13 17:39:57 game 5 started with 2 players
+2022-09-13 17:39:57 getAnswers game started
+2022-09-13 17:40:02 got 5 from player 11
+2022-09-13 17:40:07 got 2 from player 10
+2022-09-13 17:40:07 closing getAnswers game 5
+2022-09-13 17:40:07 maxInnings : 3
+2022-09-13 17:40:15 sending pitch [11, 12, 2] to player 10 from player 11
+2022-09-13 17:40:15 getAnswers game 5 started
+2022-09-13 17:40:19 got 7 from player 11
+2022-09-13 17:40:22 got 8 from player 10
+2022-09-13 17:40:22 swing received : [[0, 7], [1, 8]]
+2022-09-13 17:40:22 hit
+2022-09-13 17:40:23 outs 0 ,score 0 - 0
+2022-09-13 17:40:38 sending pitch [4, 5, 1] to bot from player 11
+2022-09-13 17:40:38 getAnswers game 5 started
+2022-09-13 17:40:41 got 7 from player 10
+2022-09-13 17:40:42 got 5 from player 11
+2022-09-13 17:40:42 swing received : [[1, 7], [0, 5]]
+2022-09-13 17:40:42 strike
+2022-09-13 17:40:55 sending pitch [10, 9, 2] to bot from player 11
+2022-09-13 17:40:55 getAnswers game 5 started
+2022-09-13 17:40:58 got 0 from player 11
+2022-09-13 17:41:00 got 5 from player 10
+2022-09-13 17:41:00 swing received : [[0, 0], [1, 5]]
+2022-09-13 17:41:00 hit
+2022-09-13 17:41:01 outs 0 ,score 1 - 0
+2022-09-13 17:41:23 sending pitch [9, 8, 2] to bot from player 11
+2022-09-13 17:41:23 getAnswers game 5 started
+2022-09-13 17:41:25 got 5 from player 11
+2022-09-13 17:41:28 got 1 from player 10
+2022-09-13 17:41:28 swing received : [[0, 5], [1, 1]]
+2022-09-13 17:41:28 hit
+2022-09-13 17:41:30 outs 0 ,score 2 - 0
+2022-09-13 18:00:39 waiting on players for 3 secs
+2022-09-13 18:00:47 game 5 started with 2 players
+2022-09-13 18:00:47 getAnswers game started
+2022-09-13 18:00:48 got 2 from player 11
+2022-09-13 18:00:49 got 4 from player 10
+2022-09-13 18:00:49 closing getAnswers game 5
+2022-09-13 18:00:49 maxInnings : 3
+2022-09-13 18:00:54 sending pitch [11, 11, 2] to player 10 from player 11
+2022-09-13 18:00:54 getAnswers game 5 started
+2022-09-14 14:39:38 waiting on players for 3 secs
+2022-09-14 14:39:44 game 5 started with 2 players
+2022-09-14 14:39:44 getAnswers game started
+2022-09-14 14:39:46 got 2 from player 11
+2022-09-14 14:39:48 got 4 from player 10
+2022-09-14 14:39:48 closing getAnswers game 5
+2022-09-14 14:39:48 maxInnings : 3
+2022-09-14 14:41:41 sending pitch [10, 12, 2] to player 10 from player 11
+2022-09-14 14:41:41 getAnswers game 5 started
+2022-09-14 14:41:44 got 9 from player 10
+2022-09-14 14:41:46 got 8 from player 11
+2022-09-14 14:41:46 swing received : [[1, 9], [0, 8]]
+2022-09-14 14:41:46 strike
+2022-09-14 14:41:50 sending pitch [11, 12, 2] to player 10 from player 11
+2022-09-14 14:41:50 getAnswers game 5 started

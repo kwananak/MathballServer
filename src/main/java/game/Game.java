@@ -144,7 +144,6 @@ public class Game extends Thread {
 		while (true) {
 			massSend("command:startLoop:" + strikes + "," + balls + "," + outs  + "," + inning + "," + scoreEvens + " - " + scoreOdds + "," + topStr + ",false");			
 			pitch = getPitch(getAnswerFromMount(bases.getPitcher()));
-			massSend("command:ball:" + pitch.get(0) + "X" + pitch.get(1));
 			if (bases.getHitter().getClientHandler() != null) {
 				log.printLog("sending pitch " + pitch.toString() + " to player " + bases.getHitter().getClientHandler().getClientID() + " from player " + bases.getPitcher().getClientHandler().getClientID());
 			} else {
@@ -224,8 +223,8 @@ public class Game extends Thread {
 		} else {
 			answerers[1] = bases.getHome()[1];	
 		}
-		answerers[0].getClientHandler().sender("command:sender:" + pitch.get(0) + " * " + pitch.get(1));
-		answerers[1].getClientHandler().sender("command:sender:" + pitch.get(0) + " * " + pitch.get(1));
+		answerers[0].getClientHandler().sender("command:sender:" + pitch.get(0) + "," + pitch.get(1));
+		answerers[1].getClientHandler().sender("command:sender:" + pitch.get(0) + "," + pitch.get(1));
 		answers.clear();
 		log.printLog("getAnswers game " + gameID + " started");
 		
