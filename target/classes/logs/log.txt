@@ -1882,3 +1882,18 @@
 2022-09-16 16:45:03 accepted connection Thread[Thread-0,5,main]
 2022-09-16 16:45:03 game 0 started
 2022-09-16 16:45:04 accepted connection Thread[Thread-3,5,main]
+2022-09-16 17:32:48 serverStarted
+2022-09-16 17:32:50 accepted connection Thread[Thread-0,5,main]
+2022-09-16 17:32:50 game 0 started
+2022-09-16 17:32:51 accepted connection Thread[Thread-3,5,main]
+2022-09-16 17:58:46 serverStarted
+2022-09-16 17:58:50 accepted connection Thread[Thread-0,5,main]
+2022-09-16 17:58:50 game 0 started
+2022-09-16 17:58:50 accepted connection Thread[Thread-3,5,main]
+2022-09-16 18:03:34 accepted connection Thread[Thread-5,5,main]
+2022-09-16 18:03:34 game 1 started
+2022-09-16 18:03:35 accepted connection Thread[Thread-8,5,main]
+2022-09-16 18:05:43 serverStarted
+2022-09-16 18:05:46 accepted connection Thread[Thread-0,5,main]
+2022-09-16 18:05:46 game 0 started
+2022-09-16 18:05:47 accepted connection Thread[Thread-3,5,main]

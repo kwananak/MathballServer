@@ -52,7 +52,7 @@ public class Bases {
 		}
 	}
 	
-	public Integer cycleBases(int hit, int base) {
+	public int cycleBases(int hit, int base) {
 		int score = 0; 
 		if (base == 0) {
 			for (int i = 0; i < hit; i++) {
@@ -67,6 +67,7 @@ public class Bases {
 				if (third[1] != null) {score++;}
 				third[1] = second[1];
 				second[1] = first[1];
+				first[1] = null;
 			}
 		}
 		return score;

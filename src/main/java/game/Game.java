@@ -156,7 +156,7 @@ public class Game extends Thread {
 				}
 			} else if (swing.equals("runnerHit")) {
 				massSend("command:runnerHit:" + pitch.plate);
-				bases.cycleBases(pitch.strength, pitch.plate);
+				upScore(bases.cycleBases(pitch.strength, pitch.plate));
 			}
 		}
 	}
@@ -221,11 +221,11 @@ public class Game extends Thread {
 		} else {
 			answerers[1] = bases.getPlayer(pitch.field, 1);	
 		}
+		massSend("command:ball:" + pitch.a + "," + pitch.b + "," + pitch.plate);
 		answerers[0].getClientHandler().sender("command:sender:" + pitch.a + "," + pitch.b);
 		answerers[1].getClientHandler().sender("command:sender:" + pitch.a + "," + pitch.b);
 		answers.clear();
 		log.printLog("getAnswers game " + gameID + " started");
-		
 		while (answers.size() < 2) {
 			for (int i = 0 ; i < 2 ; i++) {
 				if(!answerers[i].getClientHandler().getStoredIn().equals("")) {
@@ -238,6 +238,7 @@ public class Game extends Thread {
 				}
 			}
 		}
+		massSend("command:endBall: ");
 	}
 	
 	private void endTurn() {
