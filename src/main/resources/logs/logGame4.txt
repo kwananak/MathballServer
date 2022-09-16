@@ -433,3 +433,84 @@
 2022-09-13 17:59:07 strike
 2022-09-13 17:59:09 sending pitch [10, 11, 2] to player 8 from player 9
 2022-09-13 17:59:09 getAnswers game 4 started
+2022-09-14 14:37:39 waiting on players for 3 secs
+2022-09-14 14:37:45 game 4 started with 2 players
+2022-09-14 14:37:45 getAnswers game started
+2022-09-14 14:37:47 got 4 from player 9
+2022-09-14 14:37:48 got 2 from player 8
+2022-09-14 14:37:48 closing getAnswers game 4
+2022-09-14 14:37:48 maxInnings : 3
+2022-09-14 14:38:04 sending pitch [11, 12, 2] to player 8 from player 9
+2022-09-14 14:38:04 getAnswers game 4 started
+2022-09-14 14:38:08 got 7 from player 8
+2022-09-14 14:38:09 got 9 from player 9
+2022-09-14 14:38:09 swing received : [[1, 7], [0, 9]]
+2022-09-14 14:38:09 strike
+2022-09-14 14:38:20 sending pitch [5, 5, 1] to player 8 from player 9
+2022-09-14 14:38:20 getAnswers game 4 started
+2022-09-14 14:38:23 got 8 from player 8
+2022-09-14 14:38:24 got 9 from player 9
+2022-09-14 14:38:24 swing received : [[1, 8], [0, 9]]
+2022-09-14 14:38:24 strike
+2022-09-14 14:38:26 outs 1 ,score 0 - 0
+2022-09-14 14:38:32 sending pitch [10, 11, 2] to bot from player 9
+2022-09-14 14:38:32 getAnswers game 4 started
+2022-09-14 14:38:36 got 7 from player 8
+2022-09-14 14:38:37 got 8 from player 9
+2022-09-14 14:38:37 swing received : [[1, 7], [0, 8]]
+2022-09-14 14:38:37 strike
+2022-09-14 14:38:41 sending pitch [9, 10, 2] to bot from player 9
+2022-09-14 14:38:41 getAnswers game 4 started
+2022-09-14 14:38:45 got 7 from player 8
+2022-09-14 14:38:46 got 8 from player 9
+2022-09-14 14:38:46 swing received : [[1, 7], [0, 8]]
+2022-09-14 14:38:46 strike
+2022-09-14 14:38:47 outs 2 ,score 0 - 0
+2022-09-14 14:38:54 sending pitch [12, 11, 2] to player 9 from player 8
+2022-09-14 14:38:54 getAnswers game 4 started
+2022-09-14 14:38:56 got 8 from player 9
+2022-09-14 14:38:58 got 9 from player 8
+2022-09-14 14:38:58 swing received : [[1, 8], [0, 9]]
+2022-09-14 14:38:58 strike
+2022-09-14 14:39:10 sending pitch [11, 10, 2] to player 9 from player 8
+2022-09-14 14:39:10 getAnswers game 4 started
+2022-09-14 14:39:13 got 8 from player 9
+2022-09-14 14:39:14 got 9 from player 8
+2022-09-14 14:39:14 swing received : [[1, 8], [0, 9]]
+2022-09-14 14:39:14 strike
+2022-09-14 14:39:17 outs 1 ,score 0 - 0
+2022-09-14 14:39:22 sending pitch [11, 11, 2] to bot from player 8
+2022-09-14 14:39:22 getAnswers game 4 started
+2022-09-14 18:28:08 waiting on players for 3 secs
+2022-09-14 18:28:15 game 4 started with 2 players
+2022-09-14 18:28:15 getAnswers game started
+2022-09-14 18:28:16 got 5 from player 9
+2022-09-14 18:28:20 got 2 from player 8
+2022-09-14 18:28:20 closing getAnswers game 4
+2022-09-14 18:28:20 maxInnings : 3
+2022-09-14 18:28:25 sending pitch [12, 9, 2] to player 8 from player 9
+2022-09-14 18:28:25 getAnswers game 4 started
+2022-09-14 18:28:27 got 8 from player 8
+2022-09-14 18:28:29 got 5 from player 9
+2022-09-14 18:28:29 swing received : [[1, 8], [0, 5]]
+2022-09-14 18:28:29 strike
+2022-09-14 18:28:32 sending pitch [11, 8, 2] to player 8 from player 9
+2022-09-14 18:28:32 getAnswers game 4 started
+2022-09-14 19:25:09 waiting on players for 3 secs
+2022-09-14 19:25:15 game 4 started with 2 players
+2022-09-14 19:25:15 getAnswers game started
+2022-09-14 19:25:19 got 3 from player 9
+2022-09-14 19:25:20 got 4 from player 8
+2022-09-14 19:25:20 closing getAnswers game 4
+2022-09-14 19:25:20 maxInnings : 3
+2022-09-14 19:25:26 sending pitch [12, 11, 2] to player 8 from player 9
+2022-09-14 19:25:26 getAnswers game 4 started
+2022-09-14 19:25:29 got 8 from player 8
+2022-09-14 19:25:31 got 6 from player 9
+2022-09-14 19:25:32 swing received : [[1, 8], [0, 6]]
+2022-09-14 19:25:32 strike
+2022-09-14 19:25:34 sending pitch [12, 12, 2] to player 8 from player 9
+2022-09-14 19:25:34 getAnswers game 4 started
+2022-09-16 11:32:51 waiting on players for 3 secs
+2022-09-16 11:32:59 game 4 started with 2 players
+2022-09-16 11:32:59 getAnswers game started

@@ -17,7 +17,7 @@ public class Game extends Thread {
 	private ArrayList<Player> players = new ArrayList<>();
 	private ArrayList<ArrayList<Integer>> answers = new ArrayList<>();	
 	private Bases bases = new Bases();
-	private ArrayList<Integer> pitch = new ArrayList<>();
+	private Pitch pitch;
 	private Logger log;	
 	private boolean full = false;
 	
@@ -57,20 +57,6 @@ public class Game extends Thread {
 				bases.setFieldHome(evens.getPlayers());
 				massSend("command:inningStart:bot");
 			}
-	}
-	
-	public String getAnswerFromMount(Player player) {		
-		ClientHandler ch = player.getClientHandler();
-		ch.sender("command:pitch:choose a pitch");
-		while (true) {
-			try {sleep(1000);} catch (InterruptedException e) {e.printStackTrace();}
-			if(!ch.getStoredIn().equals("")) {
-				String choice= ch.getStoredIn();
-				ch.clearStoredIn();
-				ch.sender("command:umpire: ");
-				return choice;
-			}
-		}
 	}
 	
 	public void getAnswersFromHandlers() {
@@ -142,20 +128,18 @@ public class Game extends Thread {
 		}
 		try {Thread.sleep(2000);} catch (InterruptedException e) {e.printStackTrace();}
 		while (true) {
-			massSend("command:startLoop:" + strikes + "," + balls + "," + outs  + "," + inning + "," + scoreEvens + " - " + scoreOdds + "," + topStr + ",false");			
-			pitch = getPitch(getAnswerFromMount(bases.getPitcher()));
-			if (bases.getHitter().getClientHandler() != null) {
-				log.printLog("sending pitch " + pitch.toString() + " to player " + bases.getHitter().getClientHandler().getClientID() + " from player " + bases.getPitcher().getClientHandler().getClientID());
-			} else {
-				log.printLog("sending pitch " + pitch.toString() + " to bot from player " + bases.getPitcher().getClientHandler().getClientID());
-			}
+			massSend("command:startLoop:" + strikes + "," + balls + "," + outs  + "," + inning + "," + scoreEvens + " - " + scoreOdds + "," + topStr + ",false");
+			
+			pitch = Pitcher.getPitch(bases.getPitcher());
 			sendPitch(pitch);
+			
+			try {Thread.sleep(500);} catch (InterruptedException e1) {e1.printStackTrace();}
 			log.printLog("swing received : " + answers);
 			swing = swingResult(pitch);
 			log.printLog(swing);
-			if (swing == "hit") {
+			if (swing.equals("hit")) {
 				break;
-			} else {
+			} else if (swing.equals("strike")){
 				strikes++;
 				massSend("command:umpire:strike " + Integer.toString(strikes));
 				try {Thread.sleep(1000);} catch (InterruptedException e) {e.printStackTrace();}				
@@ -163,68 +147,82 @@ public class Game extends Thread {
 					outs++;
 					break;
 				}
-			}
-		}
-	}
-	
-	private String swingResult(ArrayList<Integer> pitch) {
-		if (pitch.get(0) * pitch.get(1) == answers.get(0).get(1)) {
-			if (answers.get(0).get(0) == 0) {
-				massSend("command:umpire:right answer from catcher");
-				return "strike";
-			} else {
-				massSend("command:umpire:right answer from batter");
-				return "hit";
-			}
-		} else {
-			if (answers.get(0).get(0) == 0) {
-				massSend("command:umpire:wrong answer from catcher");
-				return "hit";
-			} else {
-				massSend("command:umpire:wrong answer from batter");
-				return "strike";
+			} else if (swing.equals("baseCatch")) {
+				outs++;
+				massSend("command:baseCatch:" + pitch.field);
+				bases.removeRunner(pitch.plate);
+				if (outs == 2) {
+					break;
+				}
+			} else if (swing.equals("runnerHit")) {
+				massSend("command:runnerHit:" + pitch.plate);
+				bases.cycleBases(pitch.strength, pitch.plate);
 			}
 		}
 	}
 
-	private ArrayList<Integer> getPitch(String str) {
-		Random rand = new Random();
-		ArrayList<Integer> intPitch = new ArrayList<Integer>();
-		
-		if (str.equals("0")) {
-			intPitch.add(rand.nextInt(5) + 3);
-			intPitch.add(rand.nextInt(5) + 3);
-			intPitch.add(1);
+	private String swingResult(Pitch pitch) {
+		if (pitch.plate == 0) {
+			if (pitch.a * pitch.b == answers.get(0).get(1)) {
+				if (answers.get(0).get(0) == 0) {
+					massSend("command:umpire:right answer from catcher");
+					return "strike";
+				} else {
+					massSend("command:umpire:right answer from batter");
+					return "hit";
+				}
+			} else {
+				if (answers.get(0).get(0) == 0) {
+					massSend("command:umpire:wrong answer from catcher");
+					return "hit";
+				} else {
+					massSend("command:umpire:wrong answer from batter");
+					return "strike";
+				}
+			}
 		} else {
-			intPitch.add(rand.nextInt(5) + 8);
-			intPitch.add(rand.nextInt(5) + 8);
-			intPitch.add(2);
+			if (pitch.a * pitch.b == answers.get(0).get(1)) {
+				if (answers.get(0).get(0) == 0) {
+					massSend("command:umpire:right answer from base");
+					return "baseCatch";
+				} else {
+					massSend("command:umpire:right answer from runner");
+					return "runnerHit";
+				}
+			} else {
+				if (answers.get(0).get(0) == 0) {
+					massSend("command:umpire:wrong answer from base");
+					return "runnerHit";
+				} else {
+					massSend("command:umpire:wrong answer from runner");
+					return "baseCatch";
+				}
+			}
 		}
-		return intPitch; 
 	}
 	
-	private void sendPitch(ArrayList<Integer> pitch) {
+	private void sendPitch(Pitch pitch) {
 		Player[] answerers = new Player[2];
-		if (bases.getHome()[0].getClientHandler() == null) {
+		if (bases.getPlayer(pitch.plate, 0).getClientHandler() == null) {
 			if (top) {
 				answerers[0] = odds.getPlayers()[evens.cycleRealPlayersBattingNumber()];
 			} else {
 				answerers[0] = evens.getPlayers()[odds.cycleRealPlayersBattingNumber()];
 			}
 		} else {
-			answerers[0] = bases.getHome()[0];	
+			answerers[0] = bases.getPlayer(pitch.plate, 0);	
 		}
-		if (bases.getHome()[1].getClientHandler() == null) {
+		if (bases.getPlayer(pitch.field, 1).getClientHandler() == null) {
 			if (top) {
 				answerers[1] = evens.getPlayers()[evens.cycleRealPlayersBattingNumber()];
 			} else {
 				answerers[1] = odds.getPlayers()[odds.cycleRealPlayersBattingNumber()];
 			}
 		} else {
-			answerers[1] = bases.getHome()[1];	
+			answerers[1] = bases.getPlayer(pitch.field, 1);	
 		}
-		answerers[0].getClientHandler().sender("command:sender:" + pitch.get(0) + "," + pitch.get(1));
-		answerers[1].getClientHandler().sender("command:sender:" + pitch.get(0) + "," + pitch.get(1));
+		answerers[0].getClientHandler().sender("command:sender:" + pitch.a + "," + pitch.b);
+		answerers[1].getClientHandler().sender("command:sender:" + pitch.a + "," + pitch.b);
 		answers.clear();
 		log.printLog("getAnswers game " + gameID + " started");
 		
@@ -246,8 +244,8 @@ public class Game extends Thread {
 		strikes = 0;
 		if (outs < 2){
 			if (swing.equals("hit")) {
-				upScore(bases.cycleBases(pitch.get(2)));
-				massSend("command:cycleBases:" + pitch.get(2));
+				upScore(bases.cycleBases(pitch.strength, pitch.plate));
+				massSend("command:cycleBases:" + pitch.strength);
 				try {Thread.sleep(1500);} catch (InterruptedException e) {e.printStackTrace();}
 			} else {
 				bases.clearBatter();

@@ -1727,3 +1727,158 @@
 2022-09-14 14:39:38 accepted connection Thread[Thread-25,5,main]
 2022-09-14 14:39:38 game 5 started
 2022-09-14 14:39:43 accepted connection Thread[Thread-28,5,main]
+2022-09-14 14:48:21 serverStarted
+2022-09-14 14:48:26 accepted connection Thread[Thread-0,5,main]
+2022-09-14 14:48:26 game 0 started
+2022-09-14 14:48:27 accepted connection Thread[Thread-3,5,main]
+2022-09-14 15:45:35 serverStarted
+2022-09-14 15:45:41 accepted connection Thread[Thread-0,5,main]
+2022-09-14 15:45:41 game 0 started
+2022-09-14 15:45:43 accepted connection Thread[Thread-3,5,main]
+2022-09-14 16:00:58 serverStarted
+2022-09-14 16:01:04 accepted connection Thread[Thread-0,5,main]
+2022-09-14 16:01:04 game 0 started
+2022-09-14 16:01:06 accepted connection Thread[Thread-3,5,main]
+2022-09-14 18:22:27 serverStarted
+2022-09-14 18:22:33 accepted connection Thread[Thread-0,5,main]
+2022-09-14 18:22:33 game 0 started
+2022-09-14 18:22:34 accepted connection Thread[Thread-3,5,main]
+2022-09-14 18:23:59 accepted connection Thread[Thread-5,5,main]
+2022-09-14 18:23:59 game 1 started
+2022-09-14 18:24:00 accepted connection Thread[Thread-8,5,main]
+2022-09-14 18:25:07 accepted connection Thread[Thread-10,5,main]
+2022-09-14 18:25:07 game 2 started
+2022-09-14 18:25:08 accepted connection Thread[Thread-13,5,main]
+2022-09-14 18:26:29 accepted connection Thread[Thread-15,5,main]
+2022-09-14 18:26:29 game 3 started
+2022-09-14 18:26:31 accepted connection Thread[Thread-18,5,main]
+2022-09-14 18:28:08 accepted connection Thread[Thread-20,5,main]
+2022-09-14 18:28:08 game 4 started
+2022-09-14 18:28:09 accepted connection Thread[Thread-23,5,main]
+2022-09-14 18:28:48 accepted connection Thread[Thread-25,5,main]
+2022-09-14 18:28:48 game 5 started
+2022-09-14 18:28:49 accepted connection Thread[Thread-28,5,main]
+2022-09-14 18:32:31 serverStarted
+2022-09-14 18:32:35 accepted connection Thread[Thread-0,5,main]
+2022-09-14 18:32:35 game 0 started
+2022-09-14 18:32:37 accepted connection Thread[Thread-3,5,main]
+2022-09-14 18:33:09 accepted connection Thread[Thread-5,5,main]
+2022-09-14 18:33:09 game 1 started
+2022-09-14 18:33:09 accepted connection Thread[Thread-8,5,main]
+2022-09-14 18:40:56 accepted connection Thread[Thread-10,5,main]
+2022-09-14 18:40:56 game 2 started
+2022-09-14 18:40:57 accepted connection Thread[Thread-13,5,main]
+2022-09-14 19:21:21 accepted connection Thread[Thread-15,5,main]
+2022-09-14 19:21:21 game 3 started
+2022-09-14 19:21:22 accepted connection Thread[Thread-18,5,main]
+2022-09-14 19:25:09 accepted connection Thread[Thread-20,5,main]
+2022-09-14 19:25:09 game 4 started
+2022-09-14 19:25:10 accepted connection Thread[Thread-23,5,main]
+2022-09-14 19:26:03 accepted connection Thread[Thread-25,5,main]
+2022-09-14 19:26:03 game 5 started
+2022-09-14 19:26:03 accepted connection Thread[Thread-28,5,main]
+2022-09-14 19:26:48 accepted connection Thread[Thread-30,5,main]
+2022-09-14 19:26:48 game 6 started
+2022-09-14 19:26:49 accepted connection Thread[Thread-33,5,main]
+2022-09-14 20:23:51 serverStarted
+2022-09-14 20:23:54 accepted connection Thread[Thread-0,5,main]
+2022-09-14 20:23:54 game 0 started
+2022-09-14 20:23:55 accepted connection Thread[Thread-3,5,main]
+2022-09-16 11:26:47 serverStarted
+2022-09-16 11:26:56 accepted connection Thread[Thread-0,5,main]
+2022-09-16 11:26:56 game 0 started
+2022-09-16 11:26:56 accepted connection Thread[Thread-3,5,main]
+2022-09-16 11:28:03 accepted connection Thread[Thread-5,5,main]
+2022-09-16 11:28:03 game 1 started
+2022-09-16 11:28:07 accepted connection Thread[Thread-8,5,main]
+2022-09-16 11:29:35 accepted connection Thread[Thread-10,5,main]
+2022-09-16 11:29:35 game 2 started
+2022-09-16 11:29:36 accepted connection Thread[Thread-13,5,main]
+2022-09-16 11:30:48 accepted connection Thread[Thread-15,5,main]
+2022-09-16 11:30:48 game 3 started
+2022-09-16 11:32:37 accepted connection Thread[Thread-18,5,main]
+2022-09-16 11:32:51 accepted connection Thread[Thread-20,5,main]
+2022-09-16 11:32:51 game 4 started
+2022-09-16 11:32:59 accepted connection Thread[Thread-23,5,main]
+2022-09-16 11:33:38 accepted connection Thread[Thread-25,5,main]
+2022-09-16 11:33:38 game 5 started
+2022-09-16 11:34:01 accepted connection Thread[Thread-28,5,main]
+2022-09-16 11:43:26 serverStarted
+2022-09-16 11:43:30 accepted connection Thread[Thread-0,5,main]
+2022-09-16 11:43:30 game 0 started
+2022-09-16 11:43:31 accepted connection Thread[Thread-3,5,main]
+2022-09-16 14:15:00 serverStarted
+2022-09-16 14:15:11 accepted connection Thread[Thread-0,5,main]
+2022-09-16 14:15:11 game 0 started
+2022-09-16 14:15:12 accepted connection Thread[Thread-3,5,main]
+2022-09-16 14:18:19 accepted connection Thread[Thread-5,5,main]
+2022-09-16 14:18:19 game 1 started
+2022-09-16 14:18:19 accepted connection Thread[Thread-8,5,main]
+2022-09-16 14:18:20 accepted connection Thread[Thread-10,5,main]
+2022-09-16 14:18:21 accepted connection Thread[Thread-12,5,main]
+2022-09-16 14:31:16 serverStarted
+2022-09-16 14:31:21 accepted connection Thread[Thread-0,5,main]
+2022-09-16 14:31:21 game 0 started
+2022-09-16 14:31:23 accepted connection Thread[Thread-3,5,main]
+2022-09-16 14:59:03 serverStarted
+2022-09-16 14:59:05 accepted connection Thread[Thread-0,5,main]
+2022-09-16 14:59:05 game 0 started
+2022-09-16 14:59:07 accepted connection Thread[Thread-3,5,main]
+2022-09-16 15:25:20 serverStarted
+2022-09-16 15:25:24 accepted connection Thread[Thread-0,5,main]
+2022-09-16 15:25:24 game 0 started
+2022-09-16 15:25:24 accepted connection Thread[Thread-3,5,main]
+2022-09-16 15:41:16 accepted connection Thread[Thread-5,5,main]
+2022-09-16 15:41:16 game 1 started
+2022-09-16 15:41:18 accepted connection Thread[Thread-8,5,main]
+2022-09-16 15:43:13 accepted connection Thread[Thread-10,5,main]
+2022-09-16 15:43:13 game 2 started
+2022-09-16 15:43:14 accepted connection Thread[Thread-13,5,main]
+2022-09-16 16:09:55 serverStarted
+2022-09-16 16:10:00 accepted connection Thread[Thread-0,5,main]
+2022-09-16 16:10:00 game 0 started
+2022-09-16 16:10:01 accepted connection Thread[Thread-3,5,main]
+2022-09-16 16:13:32 accepted connection Thread[Thread-5,5,main]
+2022-09-16 16:13:32 game 1 started
+2022-09-16 16:13:33 accepted connection Thread[Thread-8,5,main]
+2022-09-16 16:16:25 accepted connection Thread[Thread-10,5,main]
+2022-09-16 16:16:25 game 2 started
+2022-09-16 16:16:26 accepted connection Thread[Thread-13,5,main]
+2022-09-16 16:18:31 serverStarted
+2022-09-16 16:18:35 accepted connection Thread[Thread-0,5,main]
+2022-09-16 16:18:35 game 0 started
+2022-09-16 16:18:37 accepted connection Thread[Thread-3,5,main]
+2022-09-16 16:21:07 serverStarted
+2022-09-16 16:21:55 serverStarted
+2022-09-16 16:22:00 accepted connection Thread[Thread-0,5,main]
+2022-09-16 16:22:00 game 0 started
+2022-09-16 16:22:01 accepted connection Thread[Thread-3,5,main]
+2022-09-16 16:25:01 accepted connection Thread[Thread-5,5,main]
+2022-09-16 16:25:01 game 1 started
+2022-09-16 16:25:02 accepted connection Thread[Thread-8,5,main]
+2022-09-16 16:27:02 serverStarted
+2022-09-16 16:27:17 accepted connection Thread[Thread-0,5,main]
+2022-09-16 16:27:17 game 0 started
+2022-09-16 16:27:18 accepted connection Thread[Thread-3,5,main]
+2022-09-16 16:30:30 serverStarted
+2022-09-16 16:30:34 accepted connection Thread[Thread-0,5,main]
+2022-09-16 16:30:34 game 0 started
+2022-09-16 16:30:35 accepted connection Thread[Thread-3,5,main]
+2022-09-16 16:32:48 serverStarted
+2022-09-16 16:32:51 accepted connection Thread[Thread-0,5,main]
+2022-09-16 16:32:51 game 0 started
+2022-09-16 16:32:52 accepted connection Thread[Thread-3,5,main]
+2022-09-16 16:38:11 serverStarted
+2022-09-16 16:38:14 accepted connection Thread[Thread-0,5,main]
+2022-09-16 16:38:14 game 0 started
+2022-09-16 16:38:15 accepted connection Thread[Thread-3,5,main]
+2022-09-16 16:39:40 accepted connection Thread[Thread-5,5,main]
+2022-09-16 16:39:40 game 1 started
+2022-09-16 16:39:41 accepted connection Thread[Thread-8,5,main]
+2022-09-16 16:42:11 accepted connection Thread[Thread-10,5,main]
+2022-09-16 16:42:11 game 2 started
+2022-09-16 16:42:11 accepted connection Thread[Thread-13,5,main]
+2022-09-16 16:45:00 serverStarted
+2022-09-16 16:45:03 accepted connection Thread[Thread-0,5,main]
+2022-09-16 16:45:03 game 0 started
+2022-09-16 16:45:04 accepted connection Thread[Thread-3,5,main]

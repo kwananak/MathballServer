@@ -28,18 +28,46 @@ public class Bases {
 		return home[1];
 	}
 	
-	public Player[] getHome(){
-		return home;
+	public Player getPlayer(int base, int team){
+		if (base == 0) {
+			return home[team];
+		} else if (base == 1) {
+			return first[team];
+		} else if (base == 2) {
+			return second[team];
+		} else if (base == 3) {
+			return third[team];
+		} else {
+			return mount[team];
+		}
 	}
 	
-	public Integer cycleBases(Integer hit) {
+	public void removeRunner(int base){
+		if (base == 1) {
+			first[1] = null;
+		} else if (base == 2) {
+			second[1] = null;
+		} else if (base == 3) {
+			third[1] = null;
+		}
+	}
+	
+	public Integer cycleBases(int hit, int base) {
 		int score = 0; 
-		for (int i = 0; i < hit; i++) {
-			if (third[1] != null) {score++;}
-			third[1] = second[1];
-			second[1] = first[1];
-			first[1] = home[1];
-			clearBatter();
+		if (base == 0) {
+			for (int i = 0; i < hit; i++) {
+				if (third[1] != null) {score++;}
+				third[1] = second[1];
+				second[1] = first[1];
+				first[1] = home[1];
+				clearBatter();
+			}
+		} else {
+			for (int i = 0; i < hit; i++) {
+				if (third[1] != null) {score++;}
+				third[1] = second[1];
+				second[1] = first[1];
+			}
 		}
 		return score;
 	}
