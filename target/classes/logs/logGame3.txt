@@ -550,3 +550,17 @@
 2022-09-16 11:30:48 waiting on players for 3 secs
 2022-09-16 11:32:37 game 3 started with 2 players
 2022-09-16 11:32:37 getAnswers game started
+2022-09-17 10:37:16 game 3 started
+2022-09-17 10:37:16 waiting on players for 3 secs
+2022-09-17 10:37:23 game 3 started with 3 players
+2022-09-17 10:37:23 getAnswers game started
+2022-09-17 10:37:29 got 2 from player 7
+2022-09-17 10:37:30 got 3 from player 6
+2022-09-17 10:37:31 got 4 from player 8
+2022-09-17 10:37:31 closing getAnswers game 3
+2022-09-17 10:37:31 maxInnings : 3
+2022-09-17 10:37:40 getAnswers game 3 started
+2022-09-17 11:42:46 game 3 started
+2022-09-17 11:42:46 waiting on players for 3 secs
+2022-09-17 11:42:54 game 3 started with 2 players
+2022-09-17 11:42:54 getAnswers game started

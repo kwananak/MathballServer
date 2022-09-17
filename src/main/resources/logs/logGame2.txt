@@ -810,3 +810,21 @@
 2022-09-16 16:43:50 swing received : [[1, 7], [0, 9]]
 2022-09-16 16:43:50 baseCatch
 2022-09-16 16:43:50 outs 2 ,score 0 - 0
+2022-09-17 10:36:03 game 2 started
+2022-09-17 10:36:03 waiting on players for 3 secs
+2022-09-17 10:36:10 game 2 started with 2 players
+2022-09-17 10:36:10 getAnswers game started
+2022-09-17 10:36:11 got 2 from player 4
+2022-09-17 10:36:12 got 4 from player 5
+2022-09-17 10:36:12 closing getAnswers game 2
+2022-09-17 10:36:12 maxInnings : 3
+2022-09-17 10:36:18 getAnswers game 2 started
+2022-09-17 10:36:22 got 99 from player 4
+2022-09-17 10:36:23 got 88 from player 5
+2022-09-17 10:36:24 swing received : [[1, 99], [0, 88]]
+2022-09-17 10:36:24 hit
+2022-09-17 10:36:25 outs 0 ,score 0 - 0
+2022-09-17 11:42:23 game 2 started
+2022-09-17 11:42:23 waiting on players for 3 secs
+2022-09-17 11:42:31 game 2 started with 2 players
+2022-09-17 11:42:31 getAnswers game started

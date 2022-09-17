@@ -3427,3 +3427,205 @@
 2022-09-16 18:29:28 baseCatch
 2022-09-16 18:29:28 outs 2 ,score 2 - 0
 2022-09-16 18:29:28 final score 2 - 0
+2022-09-17 10:22:58 game 0 started
+2022-09-17 10:22:58 waiting on players for 3 secs
+2022-09-17 10:23:04 game 0 started with 2 players
+2022-09-17 10:23:04 getAnswers game started
+2022-09-17 10:23:06 got 2 from player 0
+2022-09-17 10:23:07 got 4 from player 1
+2022-09-17 10:23:07 closing getAnswers game 0
+2022-09-17 10:23:07 maxInnings : 3
+2022-09-17 10:25:10 game 0 started
+2022-09-17 10:25:10 waiting on players for 3 secs
+2022-09-17 10:25:17 game 0 started with 2 players
+2022-09-17 10:25:17 getAnswers game started
+2022-09-17 10:25:18 got 3 from player 0
+2022-09-17 10:25:19 got 4 from player 1
+2022-09-17 10:25:19 closing getAnswers game 0
+2022-09-17 10:25:19 maxInnings : 3
+2022-09-17 10:25:28 getAnswers game 0 started
+2022-09-17 10:25:31 got 9 from player 0
+2022-09-17 10:25:33 got 5 from player 1
+2022-09-17 10:25:33 swing received : [[1, 9], [0, 5]]
+2022-09-17 10:25:33 hit
+2022-09-17 10:25:35 outs 0 ,score 0 - 0
+2022-09-17 10:25:40 getAnswers game 0 started
+2022-09-17 10:25:44 got 110 from player 0
+2022-09-17 10:25:47 got 110 from player 1
+2022-09-17 10:25:47 swing received : [[1, 110], [0, 110]]
+2022-09-17 10:25:47 runnerHit
+2022-09-17 10:26:06 getAnswers game 0 started
+2022-09-17 10:26:12 got 96 from player 0
+2022-09-17 10:26:15 got 96 from player 1
+2022-09-17 10:26:15 swing received : [[1, 96], [0, 96]]
+2022-09-17 10:26:15 hit
+2022-09-17 10:26:17 outs 0 ,score 1 - 0
+2022-09-17 10:26:21 getAnswers game 0 started
+2022-09-17 10:26:24 got 40 from player 1
+2022-09-17 10:26:26 got 40 from player 0
+2022-09-17 10:26:27 swing received : [[0, 40], [1, 40]]
+2022-09-17 10:26:27 baseCatch
+2022-09-17 10:33:44 game 0 started
+2022-09-17 10:33:44 waiting on players for 3 secs
+2022-09-17 10:33:51 game 0 started with 2 players
+2022-09-17 10:33:51 getAnswers game started
+2022-09-17 10:33:57 got 3 from player 1
+2022-09-17 10:33:59 got 2 from player 0
+2022-09-17 10:33:59 closing getAnswers game 0
+2022-09-17 10:33:59 maxInnings : 2
+2022-09-17 10:34:09 getAnswers game 0 started
+2022-09-17 10:34:13 got 9 from player 0
+2022-09-17 10:34:15 got 8 from player 1
+2022-09-17 10:34:15 swing received : [[1, 9], [0, 8]]
+2022-09-17 10:34:15 strike
+2022-09-17 10:34:17 getAnswers game 0 started
+2022-09-17 10:34:19 got 4 from player 0
+2022-09-17 10:34:20 got 9 from player 1
+2022-09-17 10:34:20 swing received : [[1, 4], [0, 9]]
+2022-09-17 10:34:20 strike
+2022-09-17 10:34:23 outs 1 ,score 0 - 0
+2022-09-17 10:34:31 getAnswers game 0 started
+2022-09-17 10:34:34 got 30 from player 0
+2022-09-17 10:34:35 got 58 from player 1
+2022-09-17 10:34:36 swing received : [[1, 30], [0, 58]]
+2022-09-17 10:34:36 hit
+2022-09-17 10:34:38 outs 1 ,score 0 - 0
+2022-09-17 10:34:43 getAnswers game 0 started
+2022-09-17 10:34:47 got 28 from player 1
+2022-09-17 10:34:50 got 58 from player 0
+2022-09-17 10:34:51 swing received : [[0, 28], [1, 58]]
+2022-09-17 10:34:51 baseCatch
+2022-09-17 10:34:51 outs 2 ,score 0 - 0
+2022-09-17 10:39:41 game 0 started
+2022-09-17 10:39:41 waiting on players for 3 secs
+2022-09-17 10:39:48 game 0 started with 2 players
+2022-09-17 10:39:48 getAnswers game started
+2022-09-17 10:39:49 got 2 from player 1
+2022-09-17 10:39:50 got 4 from player 0
+2022-09-17 10:39:50 closing getAnswers game 0
+2022-09-17 10:39:50 maxInnings : 3
+2022-09-17 10:39:56 getAnswers game 0 started
+2022-09-17 10:41:58 game 0 started
+2022-09-17 10:41:58 waiting on players for 3 secs
+2022-09-17 10:42:05 game 0 started with 2 players
+2022-09-17 10:42:05 getAnswers game started
+2022-09-17 10:42:06 got 4 from player 0
+2022-09-17 10:42:07 got 3 from player 1
+2022-09-17 10:42:07 closing getAnswers game 0
+2022-09-17 10:42:07 maxInnings : 3
+2022-09-17 11:38:06 game 0 started
+2022-09-17 11:38:06 waiting on players for 3 secs
+2022-09-17 11:39:42 game 0 started with 2 players
+2022-09-17 11:39:42 getAnswers game started
+2022-09-17 11:40:46 game 0 started
+2022-09-17 11:40:46 waiting on players for 3 secs
+2022-09-17 11:41:00 game 0 started with 2 players
+2022-09-17 11:41:00 getAnswers game started
+2022-09-17 11:48:32 game 0 started
+2022-09-17 11:48:32 waiting on players for 3 secs
+2022-09-17 11:48:38 game 0 started with 2 players
+2022-09-17 11:48:38 getAnswers game started
+2022-09-17 11:48:41 got 2 from player 1
+2022-09-17 11:48:42 got 4 from player 0
+2022-09-17 11:48:42 closing getAnswers game 0
+2022-09-17 11:48:42 maxInnings : 3
+2022-09-17 11:48:51 getAnswers game 0 started
+2022-09-17 11:48:55 got 35 from player 0
+2022-09-17 11:48:56 got 36 from player 1
+2022-09-17 11:48:57 swing received : [[0, 35], [1, 36]]
+2022-09-17 11:48:57 hit
+2022-09-17 11:48:58 outs 0 ,score 0 - 0
+2022-09-17 11:49:03 getAnswers game 0 started
+2022-09-17 11:49:06 got 9 from player 1
+2022-09-17 11:49:07 got 8 from player 0
+2022-09-17 11:49:07 swing received : [[1, 9], [0, 8]]
+2022-09-17 11:49:07 baseCatch
+2022-09-17 11:57:10 game 0 started
+2022-09-17 11:57:10 waiting on players for 3 secs
+2022-09-17 11:57:16 game 0 started with 5 players
+2022-09-17 11:57:16 getAnswers game started
+2022-09-17 11:57:19 got 4 from player 0
+2022-09-17 11:57:21 got 2 from player 1
+2022-09-17 11:57:23 got 5 from player 2
+2022-09-17 11:57:24 got 1 from player 3
+2022-09-17 11:57:29 got 1 from player 4
+2022-09-17 11:57:29 closing getAnswers game 0
+2022-09-17 11:57:29 maxInnings : 2
+2022-09-17 11:57:44 getAnswers game 0 started
+2022-09-17 11:57:53 got 7 from player 4
+2022-09-17 11:58:01 got 8 from player 1
+2022-09-17 11:58:01 swing received : [[1, 7], [0, 8]]
+2022-09-17 11:58:01 strike
+2022-09-17 11:58:07 getAnswers game 0 started
+2022-09-17 11:58:10 got 8 from player 4
+2022-09-17 11:58:14 got 7 from player 1
+2022-09-17 11:58:14 swing received : [[1, 8], [0, 7]]
+2022-09-17 11:58:14 strike
+2022-09-17 11:58:17 outs 1 ,score 0 - 0
+2022-09-17 11:58:24 getAnswers game 0 started
+2022-09-17 11:58:28 got 72 from player 2
+2022-09-17 11:58:35 got 8 from player 1
+2022-09-17 11:58:35 swing received : [[1, 72], [0, 8]]
+2022-09-17 11:58:35 hit
+2022-09-17 11:58:37 outs 1 ,score 0 - 0
+2022-09-17 11:58:48 getAnswers game 0 started
+2022-09-17 11:58:56 got 42 from player 0
+2022-09-17 11:59:07 got 9 from player 1
+2022-09-17 11:59:08 swing received : [[1, 42], [0, 9]]
+2022-09-17 11:59:08 hit
+2022-09-17 11:59:09 outs 1 ,score 0 - 0
+2022-09-17 11:59:15 getAnswers game 0 started
+2022-09-17 11:59:31 got 1 from player 4
+2022-09-17 11:59:38 got 5 from player 1
+2022-09-17 11:59:39 swing received : [[1, 1], [0, 5]]
+2022-09-17 11:59:39 strike
+2022-09-17 11:59:43 getAnswers game 0 started
+2022-09-17 11:59:54 got 8 from player 1
+2022-09-17 11:59:57 got 6 from player 2
+2022-09-17 11:59:58 swing received : [[0, 8], [1, 6]]
+2022-09-17 11:59:58 hit
+2022-09-17 11:59:59 outs 1 ,score 1 - 0
+2022-09-17 12:04:07 game 0 started
+2022-09-17 12:04:07 waiting on players for 3 secs
+2022-09-17 12:04:14 game 0 started with 4 players
+2022-09-17 12:04:14 getAnswers game started
+2022-09-17 12:04:21 got 3 from player 3
+2022-09-17 12:04:22 got 5 from player 2
+2022-09-17 12:04:23 got 1 from player 0
+2022-09-17 12:04:25 got 2 from player 1
+2022-09-17 12:04:25 closing getAnswers game 0
+2022-09-17 12:04:25 maxInnings : 2
+2022-09-17 12:08:07 game 0 started
+2022-09-17 12:08:07 waiting on players for 3 secs
+2022-09-17 12:08:14 game 0 started with 2 players
+2022-09-17 12:09:10 game 0 started
+2022-09-17 12:09:10 waiting on players for 3 secs
+2022-09-17 12:09:17 game 0 started with 5 players
+2022-09-17 12:11:27 getAnswers game started
+2022-09-17 12:11:32 got 2 from player 1
+2022-09-17 12:11:33 got 4 from player 2
+2022-09-17 12:11:35 got 2 from player 3
+2022-09-17 12:11:37 got 5 from player 4
+2022-09-17 12:11:39 got 1 from player 0
+2022-09-17 12:11:39 closing getAnswers game 0
+2022-09-17 12:11:39 maxInnings : 2
+2022-09-17 12:11:50 getAnswers game 0 started
+2022-09-17 12:11:54 got 7 from player 3
+2022-09-17 12:11:57 got 9 from player 0
+2022-09-17 12:11:57 swing received : [[0, 7], [1, 9]]
+2022-09-17 12:11:57 hit
+2022-09-17 12:11:59 outs 0 ,score 0 - 0
+2022-09-17 12:20:34 game 0 started
+2022-09-17 12:20:34 waiting on players for 3 secs
+2022-09-17 12:20:41 game 0 started with 2 players
+2022-09-17 12:20:41 getAnswers game started
+2022-09-17 12:20:42 got 4 from player 1
+2022-09-17 12:20:52 got 2 from player 0
+2022-09-17 12:20:52 closing getAnswers game 0
+2022-09-17 12:20:52 maxInnings : 3
+2022-09-17 12:21:06 getAnswers game 0 started
+2022-09-17 12:21:13 got 545 from player 1
+2022-09-17 12:21:16 got 64 from player 0
+2022-09-17 12:21:16 swing received : [[0, 545], [1, 64]]
+2022-09-17 12:21:16 hit
+2022-09-17 12:21:18 outs 0 ,score 0 - 0

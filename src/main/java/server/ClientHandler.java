@@ -12,11 +12,13 @@ public class ClientHandler extends Thread{
 	private int clientID;
 	private static ArrayList<String> inputs = new ArrayList<String>();
 	private String storedIn = "";
-	Server server;
+	private GamesHandler gamesHandler;
+	private boolean ready = false;
 	
-	public ClientHandler(Socket clientSocket, int IDFromServer) throws IOException {
+	public ClientHandler(Socket clientSocket, int IDFromServer, GamesHandler gamesHandler) throws IOException {
 		this.client = clientSocket;
 		this.clientID = IDFromServer;
+		this.gamesHandler = gamesHandler;
 		in = new BufferedReader(new InputStreamReader(client.getInputStream()));
 		out = new PrintWriter(client.getOutputStream(), true);
 	}
@@ -24,6 +26,15 @@ public class ClientHandler extends Thread{
 	public void run() {
 		System.out.println("ClientHandlerstarted" + clientID);
 		try {
+			Thread.sleep(1000);
+			out.println("command:menu: ");
+			while (true) {
+				System.out.println("menu sent");
+				if (in.readLine().equals("ready")) {
+					break;
+				}
+			}
+			gamesHandler.joinGame(this);
 			while (true) {
 				storedIn = in.readLine();
 				inputs.add(storedIn);
@@ -32,7 +43,7 @@ public class ClientHandler extends Thread{
 					in.close();
 				}
 			}
-		} catch (IOException e) {
+		} catch (IOException | InterruptedException e) {
 			e.printStackTrace();
 		}
 	}

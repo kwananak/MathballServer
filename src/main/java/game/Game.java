@@ -3,8 +3,8 @@ package game;
 
 import java.util.*;
 
-import logger.Logger;
 import server.ClientHandler;
+import server.Logger;
 
 public class Game extends Thread {
 	
@@ -27,6 +27,7 @@ public class Game extends Thread {
 	}
 	
 	public void run() {
+		log.printLog("game " + gameID + " started");
 		Setuper.waitForPlayers(this);
 		log.printLog("game " + Integer.toString(gameID) + " started with " + Integer.toString(players.size()) + " players");
 		setTeams(Setuper.makeTeams(players));
