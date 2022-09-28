@@ -1379,3 +1379,58 @@
 2022-09-17 12:05:24 closing getAnswers game 1
 2022-09-17 12:05:24 maxInnings : 3
 2022-09-17 12:05:51 getAnswers game 1 started
+2022-09-20 10:47:43 game 1 started
+2022-09-20 10:47:43 waiting on players for 3 secs
+2022-09-20 10:47:49 game 1 started with 2 players
+2022-09-20 10:47:49 getAnswers game started
+2022-09-20 10:47:51 got 3 from player 3
+2022-09-20 10:47:53 got 5 from player 2
+2022-09-20 10:47:53 closing getAnswers game 1
+2022-09-20 10:47:53 maxInnings : 4
+2022-09-20 10:47:59 getAnswers game 1 started
+2022-09-20 10:48:05 got 80 from player 2
+2022-09-26 10:53:02 game 1 started
+2022-09-26 10:53:02 waiting on players for 3 secs
+2022-09-26 10:53:09 game 1 started with 2 players
+2022-09-26 10:53:09 getAnswers game started
+2022-09-26 10:53:10 got 1 from player 3
+2022-09-26 10:53:11 got 4 from player 2
+2022-09-26 10:53:11 closing getAnswers game 1
+2022-09-26 10:53:11 maxInnings : 2
+2022-09-26 10:53:17 getAnswers game 1 started
+2022-09-26 10:53:20 got 88 from player 3
+2022-09-26 10:53:22 got 88 from player 2
+2022-09-26 10:53:22 swing received : [[1, 88], [0, 88]]
+2022-09-26 10:53:22 hit
+2022-09-26 10:53:24 outs 0 ,score 0 - 0
+2022-09-26 10:53:33 getAnswers game 1 started
+2022-09-26 10:53:35 got 80 from player 3
+2022-09-26 10:53:37 got 80 from player 2
+2022-09-26 10:53:37 swing received : [[1, 80], [0, 80]]
+2022-09-26 10:53:37 hit
+2022-09-26 10:53:39 outs 0 ,score 1 - 0
+2022-09-26 10:53:45 getAnswers game 1 started
+2022-09-26 10:53:49 got 99 from player 2
+2022-09-26 10:53:51 got 99 from player 3
+2022-09-26 10:53:51 swing received : [[0, 99], [1, 99]]
+2022-09-26 10:53:51 baseCatch
+2022-09-26 10:54:07 getAnswers game 1 started
+2022-09-26 10:54:09 got 7 from player 2
+2022-09-26 10:54:10 got 9 from player 3
+2022-09-26 10:54:10 swing received : [[0, 7], [1, 9]]
+2022-09-26 10:54:10 hit
+2022-09-26 10:54:12 outs 1 ,score 1 - 0
+2022-09-26 10:54:17 getAnswers game 1 started
+2022-09-26 10:54:19 got 99 from player 3
+2022-09-26 10:54:20 got 99 from player 2
+2022-09-26 10:54:21 swing received : [[1, 99], [0, 99]]
+2022-09-26 10:54:21 runnerHit
+2022-09-26 11:00:53 getAnswers game 1 started
+2022-09-26 15:03:47 game 1 started
+2022-09-26 15:03:47 waiting on players for 3 secs
+2022-09-26 15:21:27 game 1 started
+2022-09-26 15:21:27 waiting on players for 3 secs
+2022-09-26 15:21:44 game 1 started with 2 players
+2022-09-26 15:21:44 getAnswers game started
+2022-09-27 20:58:58 game 1 started
+2022-09-27 20:58:58 waiting on players for 3 secs

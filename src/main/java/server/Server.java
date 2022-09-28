@@ -1,9 +1,10 @@
+// Tous droits réservés, copyright 2022 Dominic Daoust
+
 package server;
 
-import java.net.*;
-import java.io.*;
-import java.util.*;
-import game.Game;
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.util.ArrayList;
 
 public class Server {
 	

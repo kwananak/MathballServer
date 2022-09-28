@@ -4,6 +4,9 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 
+import database.PlayerCard;
+import database.Recorder;
+
 public class ClientHandler extends Thread{
 	
 	private Socket client;
@@ -13,7 +16,7 @@ public class ClientHandler extends Thread{
 	private static ArrayList<String> inputs = new ArrayList<String>();
 	private String storedIn = "";
 	private GamesHandler gamesHandler;
-	private boolean ready = false;
+	private PlayerCard playerCard;
 	
 	public ClientHandler(Socket clientSocket, int IDFromServer, GamesHandler gamesHandler) throws IOException {
 		this.client = clientSocket;
@@ -30,7 +33,11 @@ public class ClientHandler extends Thread{
 			out.println("command:menu: ");
 			while (true) {
 				System.out.println("menu sent");
-				if (in.readLine().equals("ready")) {
+				String str = in.readLine();
+				if (!str.equals("ready")) {
+					playerCard = Recorder.checkForPlayerCard(new PlayerCard(str, "3"));
+					out.println("command:menu:" + playerCard);
+				} else if (str.equals("ready")) {
 					break;
 				}
 			}
@@ -62,6 +69,10 @@ public class ClientHandler extends Thread{
 	
 	public String getClientID() {
 		return Integer.toString(clientID);
+	}
+	
+	public PlayerCard getPlayerCard() {
+		return playerCard;
 	}
 	
 }

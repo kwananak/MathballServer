@@ -828,3 +828,5 @@
 2022-09-17 11:42:23 waiting on players for 3 secs
 2022-09-17 11:42:31 game 2 started with 2 players
 2022-09-17 11:42:31 getAnswers game started
+2022-09-26 15:21:57 game 2 started
+2022-09-26 15:21:57 waiting on players for 3 secs
